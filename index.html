@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="cipher.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div id="title" >
+            <div class="col" id="col0">
+                <h1 class="text-center">Nathan's Ceaser Cipher Project</h1><br />
+            </div>
+        </div>
+        <form name="cipherarea" id="cipherarea">
+            <div class="col" id="col1">
+                <label for="userMessage">Enter your message:</label><br/>
+                <textarea id="userMessage"  rows="4" cols="50" oninput="doConvert()"></textarea>
+                <br/> <br/>
+                <label for="encode">Encode:</label>
+                <input type="radio" name="code" id="encode" checked onchange="doConvert()" />
+                <label for="decode">Decode:</label>
+                <input type="radio" name="code" id="decode" onchange="doConvert()" /> 
+                <br/> <br/>
+                <label for="userKey1">Key1:</label>
+                <input type="number" min="0" max="26" id="userKey1" value="1" onchange="doConvert()" />
+                <label for="userKey2">Key2:</label>
+                <input type="number" min="0" max="26" id="userKey2" value="1" onchange="doConvert()" />
+                <br/> <br/>
+                <label for="output">Output:</label><br/>
+                <textarea id="output"  rows="4" cols="50"></textarea>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="cipher.js"></script>
 </body>
 </html>
